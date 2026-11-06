@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harare Zimbabwe Mission Reunion 2026 — Saturday 5 December, Harare</title>
+<meta name="description" content="Calling every comrade. The Harare Zimbabwe Mission Reunion 2026 gathers on Saturday 5 December at The Temple, 10:00 AM, then Kingfisher Park, Harare. Come and be together again.">
+<meta name="theme-color" content="#07160F">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="apple-touch-icon" href="assets/favicon.png">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hzm-reunion-2026.vercel.app/">
+<meta property="og:title" content="Harare Zimbabwe Mission Reunion 2026">
+<meta property="og:description" content="Saturday 5 December 2026 · The Temple, 10:00 AM · Kingfisher Park, Harare. Come and be together again.">
+<meta property="og:image" content="https://hzm-reunion-2026.vercel.app/assets/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Harare Zimbabwe Mission Reunion 2026">
+<meta name="twitter:description" content="Saturday 5 December 2026 · The Temple, 10:00 AM · Kingfisher Park, Harare.">
+<meta name="twitter:image" content="https://hzm-reunion-2026.vercel.app/assets/og.jpg">
+<link rel="canonical" href="https://hzm-reunion-2026.vercel.app/">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Cormorant+Garamond:wght@500;600&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --ink:#07160F; --forest:#0D2B1F; --emerald:#16402C;
+    --gold:#E5AB3E; --pale:#D8B55A; --champ:#F7E3AE;
+    --copper:#B87A2A; --cream:#F7F2E4;
+    --line:rgba(229,171,62,.26);
+    --serif:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+    --sans:"Montserrat",system-ui,-apple-system,"Segoe UI",sans-serif;
+    --display:"Archivo Black",Impact,"Arial Black",sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{
+    margin:0;background:var(--ink);color:var(--cream);
+    font-family:var(--sans);font-size:16px;line-height:1.6;
+    -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+    overflow-x:hidden;
+  }
+  ::selection{background:var(--gold);color:var(--ink)}
+  img{max-width:100%;display:block}
+  a{color:inherit}
+  .wrap{width:min(1180px,calc(100% - 3rem));margin-inline:auto}
+  .skip{
+    position:absolute;left:1rem;top:-4rem;z-index:100;
+    background:var(--gold);color:var(--ink);padding:.7rem 1rem;
+    font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;
+  }
+  .skip:focus{top:1rem}
+
+  /* ---------- nav ---------- */
+  .nav{
+    position:fixed;inset:0 0 auto;z-index:40;
+    display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+    padding:1.1rem min(3rem,5vw);
+    transition:background .35s ease,border-color .35s ease,padding .35s ease;
+    border-bottom:1px solid transparent;
+  }
+  body.scrolled .nav{
+    background:rgba(7,22,15,.86);backdrop-filter:blur(14px);
+    border-bottom-color:var(--line);padding-block:.65rem;
+  }
+  .nav img{height:30px;width:auto}
+  .nav nav{display:flex;gap:2rem}
+  .nav nav a{
+    text-decoration:none;font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;
+    color:var(--champ);opacity:.82;transition:opacity .2s,color .2s;
+  }
+  .nav nav a:hover{opacity:1;color:var(--gold)}
+  @media (max-width:820px){.nav nav{display:none}}
+
+  /* ---------- buttons ---------- */
+  .btn{
+    display:inline-flex;align-items:center;justify-content:center;gap:.55rem;
+    padding:1rem 1.5rem;border:1px solid var(--gold);border-radius:0;
+    font-family:var(--sans);font-size:.68rem;font-weight:600;letter-spacing:.2em;
+    text-transform:uppercase;text-decoration:none;cursor:pointer;
+    transition:transform .2s ease,background .2s ease,color .2s ease,border-color .2s;
+    background:transparent;color:var(--champ);
+  }
+  .btn:hover{transform:translateY(-2px)}
+  .btn.gold{background:var(--gold);color:var(--ink);border-color:var(--gold)}
+  .btn.gold:hover{background:var(--champ);border-color:var(--champ)}
+  .btn.ghost{background:rgba(7,22,15,.25);color:var(--cream);border-color:rgba(247,242,228,.45)}
+  .btn.ghost:hover{border-color:var(--gold);color:var(--gold)}
+  .btn.small{padding:.7rem 1.1rem;font-size:.6rem}
+  .btn:focus-visible,a:focus-visible,button:focus-visible{
+    outline:2px solid var(--gold);outline-offset:4px;
+  }
+
+  /* ---------- hero ---------- */
+  .hero{position:relative;min-height:100svh;display:grid;place-items:center;overflow:hidden;isolation:isolate}
+  .hero video{
+    position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+    z-index:-3;filter:saturate(1.05) brightness(.88);
+  }
+  .hero::before{
+    content:"";position:absolute;inset:0;z-index:-2;
+    background:
+      radial-gradient(90% 60% at 50% 30%,rgba(7,22,15,0) 0%,rgba(7,22,15,.55) 70%,var(--ink) 100%),
+      linear-gradient(180deg,rgba(7,22,15,.55) 0%,rgba(7,22,15,.18) 42%,var(--ink) 100%);
+  }
+  .frame{
+    position:absolute;inset:22px;z-index:-1;pointer-events:none;
+    border:1px solid rgba(229,171,62,.38);
+  }
+  .frame::after{content:"";position:absolute;inset:8px;border:1px solid rgba(229,171,62,.16)}
+  .hero-inner{position:relative;text-align:center;padding:7rem 1.25rem 5rem;max-width:1000px}
+  .kicker{
+    margin:0 0 1.6rem;font-size:clamp(.6rem,1.1vw,.78rem);font-weight:600;
+    letter-spacing:.42em;text-transform:uppercase;color:var(--pale);
+  }
+  .kicker.copper{color:var(--copper)}
+  .hero h1{margin:0;display:flex;flex-direction:column;align-items:center;line-height:.85}
+  .reunion{
+    font-family:var(--serif);font-weight:600;
+    font-size:clamp(4.2rem,15.5vw,11rem);
+    letter-spacing:.005em;
+    background:linear-gradient(175deg,#FAEAC0 0%,var(--champ) 18%,var(--gold) 52%,#C98E2E 78%,#8A5A11 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+    filter:drop-shadow(0 6px 30px rgba(229,171,62,.16));
+  }
+  .year{
+    margin-top:.5rem;font-family:var(--display);
+    font-size:clamp(1.45rem,3.4vw,2.6rem);letter-spacing:.62em;color:var(--cream);
+    padding-left:.62em;
+  }
+  .dateline{
+    margin:2rem 0 0;font-size:clamp(.62rem,1.2vw,.8rem);font-weight:600;
+    letter-spacing:.24em;text-transform:uppercase;color:var(--gold);
+  }
+  .tagline{margin:1.1rem 0 2.2rem;font-family:var(--serif);font-size:clamp(1.35rem,2.6vw,1.9rem);color:var(--cream)}
+  .actions{display:flex;flex-wrap:wrap;justify-content:center;gap:.8rem}
+
+  .count{
+    display:flex;justify-content:center;margin-top:3.2rem;
+    border-block:1px solid var(--line);padding-block:1.1rem;
+  }
+  .count div{min-width:6.2rem;padding-inline:1.1rem;border-left:1px solid var(--line)}
+  .count div:first-child{border-left:0}
+  .count strong{
+    display:block;font-family:var(--display);font-size:clamp(1.4rem,3vw,2.1rem);
+    font-weight:400;color:var(--gold);font-variant-numeric:tabular-nums;line-height:1;
+  }
+  .count span{display:block;margin-top:.5rem;font-size:.55rem;letter-spacing:.28em;color:var(--pale)}
+  .scroll{
+    position:absolute;bottom:1.6rem;left:50%;transform:translateX(-50%);
+    display:flex;flex-direction:column;align-items:center;gap:.6rem;
+    text-decoration:none;color:var(--pale);font-size:.55rem;letter-spacing:.3em;
+  }
+  .scroll i{display:block;width:1px;height:38px;background:linear-gradient(var(--gold),transparent);animation:drop 2.2s ease-in-out infinite}
+  @keyframes drop{0%,100%{transform:scaleY(.45);opacity:.4}50%{transform:scaleY(1);opacity:1}}
+  @media (max-width:640px){
+    .frame{inset:12px}
+    .count div{min-width:0;flex:1;padding-inline:.4rem}
+    .hero-inner{padding-top:6rem}
+  }
+
+  /* ---------- marquee ---------- */
+  .marquee{overflow:hidden;background:var(--gold);color:var(--ink);border-block:1px solid var(--copper)}
+  .marquee .track{display:flex;width:max-content;animation:slide 32s linear infinite}
+  .marquee span{
+    padding:.85rem 1.4rem;font-family:var(--display);font-size:.68rem;
+    letter-spacing:.24em;white-space:nowrap;
+  }
+  @keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+  /* ---------- sections ---------- */
+  .section{position:relative;padding:clamp(4.5rem,9vw,8rem) 0}
+  .section-head{max-width:820px;margin-bottom:3.2rem}
+  .section h2{
+    margin:0 0 1rem;font-family:var(--serif);font-weight:500;
+    font-size:clamp(2.4rem,5.2vw,4.3rem);line-height:1.02;letter-spacing:-.01em;
+  }
+  .section h2 em{font-style:normal;color:var(--gold)}
+  .lead{font-size:clamp(.95rem,1.3vw,1.08rem);line-height:1.85;color:rgba(247,242,228,.82);max-width:60ch}
+  .lead strong{color:var(--champ);font-weight:600}
+
+  .intro{background:
+    radial-gradient(80% 60% at 85% 10%,rgba(229,171,62,.07),transparent 60%),
+    var(--ink)}
+  .intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(2rem,6vw,6rem);align-items:end}
+  @media (max-width:860px){.intro-grid{grid-template-columns:1fr;align-items:start}}
+  .stats{display:grid;grid-template-columns:repeat(3,1fr);margin-top:3.6rem;border-top:1px solid var(--line)}
+  .stats div{padding:1.6rem 1.2rem 0;border-right:1px solid var(--line)}
+  .stats div:last-child{border-right:0}
+  .stats strong{display:block;font-family:var(--serif);font-size:clamp(1.6rem,3.4vw,2.6rem);color:var(--gold);line-height:1;font-weight:500}
+  .stats span{display:block;margin-top:.55rem;font-size:.62rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(247,242,228,.62)}
+  @media (max-width:640px){.stats{grid-template-columns:1fr}.stats div{border-right:0;border-bottom:1px solid var(--line);padding-bottom:1.2rem}}
+
+  /* ---------- details ---------- */
+  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1.1rem}
+  .card{
+    position:relative;padding:2rem 1.7rem 1.8rem;
+    border:1px solid var(--line);
+    background:linear-gradient(165deg,rgba(22,64,44,.42),rgba(7,22,15,.2) 65%);
+    transition:transform .3s ease,border-color .3s ease,background .3s ease;
+  }
+  .card:hover{transform:translateY(-5px);border-color:rgba(229,171,62,.55)}
+  .card .icon{
+    width:46px;height:46px;border:1px solid rgba(229,171,62,.45);border-radius:50%;
+    display:grid;place-items:center;margin-bottom:1.4rem;color:var(--gold);
+  }
+  .card .num{position:absolute;right:1.4rem;top:1.4rem;font-family:var(--display);font-size:.7rem;color:rgba(216,181,90,.5)}
+  .card h3{margin:0 0 .55rem;font-family:var(--serif);font-weight:600;font-size:1.75rem;color:var(--cream)}
+  .card p{margin:0 0 1.1rem;font-size:.88rem;line-height:1.75;color:rgba(247,242,228,.74)}
+  .card a.textlink{
+    display:inline-block;font-size:.63rem;letter-spacing:.16em;text-transform:uppercase;
+    color:var(--gold);text-decoration:none;border-bottom:1px solid rgba(229,171,62,.4);
+    padding-bottom:.25rem;margin-right:1rem;
+  }
+  .card a.textlink:hover{border-color:var(--gold);color:var(--champ)}
+  @media (max-width:900px){.cards{grid-template-columns:1fr}}
+
+  .kids{
+    margin-top:1.1rem;display:flex;align-items:center;gap:1.6rem;
+    padding:1.7rem 2rem;background:var(--cream);color:var(--ink);
+    border-left:4px solid var(--gold);
+  }
+  .kids .sun{flex:0 0 auto;width:52px;height:52px;color:var(--copper)}
+  .kids h3{margin:0;font-family:var(--serif);font-size:1.55rem;font-weight:600}
+  .kids p{margin:.15rem 0 0;font-size:.8rem;letter-spacing:.04em;color:#4a3a22}
+  @media (max-width:640px){.kids{flex-direction:column;align-items:flex-start;gap:.8rem;padding:1.4rem}}
+
+  /* ---------- quote ---------- */
+  .quote{
+    padding:clamp(4.5rem,9vw,7.5rem) 0;text-align:center;
+    background:
+      radial-gradient(70% 120% at 50% 0%,rgba(229,171,62,.13),transparent 60%),
+      linear-gradient(180deg,var(--forest),var(--ink));
+    border-block:1px solid var(--line);
+  }
+  .quote blockquote{
+    margin:0 auto;max-width:900px;font-family:var(--serif);font-weight:500;
+    font-size:clamp(1.9rem,4.4vw,3.6rem);line-height:1.18;color:var(--cream);
+  }
+  .quote blockquote em{font-style:normal;color:var(--gold)}
+  .quote .rule{width:60px;height:1px;background:var(--gold);margin:2.2rem auto 0}
+
+  /* ---------- gallery ---------- */
+  .gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:175px;gap:.7rem}
+  .shot{
+    position:relative;padding:0;border:0;background:var(--forest);cursor:zoom-in;
+    overflow:hidden;
+  }
+  .shot img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.2,.7,.2,1),filter .4s}
+  .shot:hover img{transform:scale(1.05);filter:brightness(1.06)}
+  .shot .cap{
+    position:absolute;left:0;right:0;bottom:0;padding:1.6rem .9rem .7rem;
+    font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;text-align:left;
+    color:var(--cream);background:linear-gradient(transparent,rgba(7,22,15,.82));
+    opacity:0;transform:translateY(6px);transition:opacity .3s,transform .3s;
+  }
+  .shot:hover .cap,.shot:focus-visible .cap{opacity:1;transform:none}
+  .shot:nth-child(1){grid-column:span 2;grid-row:span 2}
+  @media (max-width:900px){
+    .gallery{grid-template-columns:repeat(3,1fr);grid-auto-rows:150px}
+  }
+  @media (max-width:640px){
+    .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px;gap:.5rem}
+    .shot:nth-child(1){grid-column:span 2}
+  }
+
+  /* ---------- rsvp ---------- */
+  .rsvp{
+    background:
+      radial-gradient(60% 60% at 15% 20%,rgba(229,171,62,.08),transparent 60%),
+      var(--forest);
+    border-block:1px solid var(--line);
+  }
+  .rsvp .section-head{max-width:760px}
+  .contacts{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem;margin:2.4rem 0 2.6rem}
+  .contact{border-top:1px solid var(--line);padding-top:1.4rem}
+  .contact h3{margin:0;font-family:var(--serif);font-size:1.55rem;font-weight:600;color:var(--cream)}
+  .contact .role{margin:.15rem 0 .9rem;font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:var(--pale)}
+  .contact .links{display:flex;gap:.6rem;flex-wrap:wrap}
+  .contact .links a{
+    font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;
+    border:1px solid rgba(229,171,62,.4);padding:.55rem .75rem;color:var(--gold);
+    transition:background .2s,color .2s;
+  }
+  .contact .links a:hover{background:var(--gold);color:var(--ink)}
+  @media (max-width:900px){.contacts{grid-template-columns:1fr}.contact{padding-block:1.2rem}}
+  .rsvp .actions{justify-content:flex-start}
+  .note{font-size:.72rem;color:rgba(247,242,228,.6);margin-top:1.8rem;max-width:70ch}
+
+  /* ---------- campaign kit ---------- */
+  .kit{
+    background:
+      radial-gradient(60% 60% at 10% 20%,rgba(229,171,62,.07),transparent 60%),
+      linear-gradient(180deg,var(--forest),var(--ink));
+    border-block:1px solid var(--line);
+  }
+  .kit .cards{margin-top:2.4rem}
+  .kit .card{display:flex;flex-direction:column}
+  .kit-tag{margin:0 0 .45rem;font-size:.55rem;letter-spacing:.24em;text-transform:uppercase;color:var(--pale)}
+  .kit-links{display:flex;flex-wrap:wrap;gap:.45rem 1rem;margin-top:auto;padding-top:.5rem}
+  .kit-links .textlink{margin-right:0}
+  .kit-download{
+    display:flex;align-items:center;justify-content:space-between;gap:1.5rem;flex-wrap:wrap;
+    margin-top:1.2rem;padding:1.6rem 2rem;border:1px solid rgba(229,171,62,.45);
+    background:linear-gradient(120deg,rgba(229,171,62,.16),rgba(229,171,62,.04));
+  }
+  .kit-download strong{display:block;font-family:var(--serif);font-size:1.5rem;font-weight:600;color:var(--cream)}
+  .kit-download span{display:block;margin-top:.2rem;font-size:.65rem;letter-spacing:.1em;color:rgba(247,242,228,.65)}
+  .kit-download .meta{margin-top:.35rem;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,242,228,.45)}
+
+  /* ---------- footer ---------- */
+  footer{padding:4rem 0 2.2rem;background:var(--ink)}
+  .foot-top{display:flex;justify-content:space-between;align-items:flex-start;gap:2rem;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:2.4rem}
+  .foot-top img{height:44px;width:auto}
+  .foot-tag{max-width:380px;font-family:var(--serif);font-size:1.35rem;line-height:1.35;color:var(--cream)}
+  .socials{display:flex;gap:.5rem;flex-wrap:wrap}
+  .socials a,.socials button{
+    font-family:var(--sans);font-size:.58rem;letter-spacing:.16em;text-transform:uppercase;
+    background:none;border:1px solid var(--line);color:var(--pale);padding:.6rem .8rem;
+    text-decoration:none;cursor:pointer;transition:border-color .2s,color .2s;
+  }
+  .socials a:hover,.socials button:hover{border-color:var(--gold);color:var(--gold)}
+  .foot-bottom{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;padding-top:1.4rem;font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(247,242,228,.45)}
+  .foot-bottom a{color:rgba(247,242,228,.6);text-decoration:none}
+  .foot-bottom a:hover{color:var(--gold)}
+  .hash{color:var(--gold)}
+
+  /* ---------- lightbox ---------- */
+  dialog#lightbox{
+    border:0;padding:0;background:transparent;max-width:100vw;max-height:100vh;
+    width:100%;height:100%;place-items:center;
+  }
+  dialog#lightbox[open]{display:grid}
+  dialog#lightbox::backdrop{background:rgba(4,12,8,.94);backdrop-filter:blur(6px)}
+  dialog#lightbox img{max-width:min(1100px,92vw);max-height:84vh;width:auto;height:auto;object-fit:contain;border:1px solid rgba(229,171,62,.35)}
+  dialog#lightbox .close{
+    position:absolute;top:1.2rem;right:1.4rem;background:none;border:1px solid var(--line);
+    color:var(--cream);font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;
+    padding:.7rem 1rem;cursor:pointer;
+  }
+  dialog#lightbox .close:hover{border-color:var(--gold);color:var(--gold)}
+
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
+    .hero video{display:none}
+  }
+</style>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"Event",
+  "name":"Harare Zimbabwe Mission Reunion 2026",
+  "startDate":"2026-12-05T10:00:00+02:00",
+  "endDate":"2026-12-05T16:00:00+02:00",
+  "eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode",
+  "eventStatus":"https://schema.org/EventScheduled",
+  "description":"Calling every comrade. The Harare Zimbabwe Mission Reunion 2026 gathers at The Temple at 10:00 AM, then travels together to Kingfisher Park, Harare. Families and children welcome.",
+  "location":[{
+    "@type":"Place",
+    "name":"The Temple",
+    "address":{"@type":"PostalAddress","addressLocality":"Harare","addressCountry":"ZW"}
+  },{
+    "@type":"Place",
+    "name":"Kingfisher Park",
+    "address":{"@type":"PostalAddress","addressLocality":"Harare","addressCountry":"ZW"}
+  }],
+  "organizer":{"@type":"Organization","name":"Harare Zimbabwe Mission Reunion Committee"},
+  "image":"https://hzm-reunion-2026.vercel.app/assets/og.jpg"
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <a href="#top" aria-label="HZM Reunion 2026 home"><img src="assets/logo.png" alt="Harare Zimbabwe Mission Reunion 2026"></a>
+  <nav aria-label="Sections">
+    <a href="#details">The day</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#kit">Campaign kit</a>
+    <a href="#rsvp">RSVP</a>
+  </nav>
+  <a class="btn small gold" href="https://wa.me/263779227983?text=Hello%21%20I%20would%20like%20to%20RSVP%20for%20the%20Harare%20Zimbabwe%20Mission%20Reunion%202026%20on%205%20December.%20My%20name%20is%3A%20">RSVP</a>
+</header>
+
+<main id="main">
+  <section class="hero" id="top">
+    <video autoplay muted loop playsinline poster="assets/poster.jpg" preload="metadata" aria-hidden="true">
+      <source src="assets/hero.mp4" type="video/mp4">
+    </video>
+    <div class="frame" aria-hidden="true"></div>
+
+    <div class="hero-inner">
+      <p class="kicker">Harare Zimbabwe Mission</p>
+      <h1>
+        <span class="reunion">REUNION</span>
+        <span class="year">2026</span>
+      </h1>
+      <p class="dateline">Saturday 5 December &middot; The Temple &middot; 10:00 AM</p>
+      <p class="tagline">Come and be together again.</p>
+
+      <div class="actions">
+        <a class="btn gold" href="https://wa.me/263779227983?text=Hello%21%20I%20would%20like%20to%20RSVP%20for%20the%20Harare%20Zimbabwe%20Mission%20Reunion%202026%20on%205%20December.%20My%20name%20is%3A%20">RSVP on WhatsApp</a>
+        <a class="btn ghost" href="reunion-2026.ics" download="HZM-Reunion-2026.ics">Add to calendar</a>
+      </div>
+
+      <div class="count" aria-label="Countdown to the reunion">
+        <div><strong id="cd-d">--</strong><span>Days</span></div>
+        <div><strong id="cd-h">--</strong><span>Hours</span></div>
+        <div><strong id="cd-m">--</strong><span>Minutes</span></div>
+        <div><strong id="cd-s">--</strong><span>Seconds</span></div>
+      </div>
+      <noscript><p class="dateline" style="margin-top:1.5rem">Saturday 5 December 2026 · 10:00 AM</p></noscript>
+    </div>
+
+    <a class="scroll" href="#welcome" aria-label="Scroll to the invitation"><span>Scroll</span><i aria-hidden="true"></i></a>
+  </section>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="track">
+      <span>Calling every comrade</span><span>&#10022;</span>
+      <span>Come and be together again</span><span>&#10022;</span>
+      <span>Saturday 5 December 2026</span><span>&#10022;</span>
+      <span>The Temple &middot; Kingfisher Park &middot; Harare</span><span>&#10022;</span>
+      <span>Calling every comrade</span><span>&#10022;</span>
+      <span>Come and be together again</span><span>&#10022;</span>
+      <span>Saturday 5 December 2026</span><span>&#10022;</span>
+      <span>The Temple &middot; Kingfisher Park &middot; Harare</span><span>&#10022;</span>
+    </div>
+  </div>
+
+  <section class="section intro" id="welcome">
+    <div class="wrap">
+      <div class="intro-grid">
+        <div>
+          <p class="kicker copper">A homecoming</p>
+          <h2>Every comrade.<br>Every family.<br><em>One table.</em></h2>
+        </div>
+        <div>
+          <p class="lead">On <strong>Saturday 5 December 2026</strong> the Harare Zimbabwe Mission family gathers again: the people who served, the families who grew up around the mission, and the friends who have heard the stories for years.</p>
+          <p class="lead">We begin at <strong>The Temple at 10:00 AM</strong>, then travel together to <strong>Kingfisher Park</strong> — if you are willing. Bring your family, your photographs and your appetite for a long lunch.</p>
+        </div>
+      </div>
+
+      <div class="stats">
+        <div><strong>05</strong><span>December 2026 &middot; Saturday</span></div>
+        <div><strong>10:00</strong><span>Arrival at The Temple</span></div>
+        <div><strong>01</strong><span>Family, together again</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="details">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker copper">The shape of the day</p>
+        <h2>Come for the morning.<br><em>Stay for the memories.</em></h2>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="num">01</span>
+          <span class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3.5" y="5" width="17" height="15.5" rx="1"/><path d="M3.5 9.5h17M8 3v4M16 3v4"/><path d="M8 13h2M12 13h2M16 13h.5M8 17h2M12 17h2"/></svg>
+          </span>
+          <h3>When</h3>
+          <p>Saturday 5 December 2026. Arrive from 10:00 AM. The day runs into the afternoon, with food, photographs and stories.</p>
+          <a class="textlink" href="reunion-2026.ics" download="HZM-Reunion-2026.ics">Save the date</a>
+        </article>
+
+        <article class="card">
+          <span class="num">02</span>
+          <span class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 21s-6.5-5.6-6.5-10.2A6.5 6.5 0 0 1 18.5 10.8C18.5 15.4 12 21 12 21Z"/><circle cx="12" cy="10.5" r="2.4"/></svg>
+          </span>
+          <h3>Where</h3>
+          <p>The Temple, Harare, then Kingfisher Park for the main gathering. Both are in Harare and easy to reach.</p>
+          <a class="textlink" href="https://www.google.com/maps/search/?api=1&amp;query=The+Temple+Harare+Zimbabwe" target="_blank" rel="noopener">The Temple</a>
+          <a class="textlink" href="https://www.google.com/maps/search/?api=1&amp;query=Kingfisher+Park+Harare+Zimbabwe" target="_blank" rel="noopener">Kingfisher Park</a>
+        </article>
+
+        <article class="card">
+          <span class="num">03</span>
+          <span class="icon" aria-hidden="true">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><rect x="3" y="5" width="18" height="12" rx="1.5"/><path d="M3 10h18M7 17v2M17 17v2"/><circle cx="7.5" cy="14" r=".7" fill="currentColor" stroke="none"/><circle cx="16.5" cy="14" r=".7" fill="currentColor" stroke="none"/></svg>
+          </span>
+          <h3>Travel together</h3>
+          <p>Meet at The Temple and ride with the group to Kingfisher Park, if you are willing. The journey is part of the reunion.</p>
+          <a class="textlink" href="https://wa.me/263776451344?text=Hello%21%20I%20would%20like%20details%20about%20group%20travel%20for%20the%20HZM%20Reunion%202026." target="_blank" rel="noopener">Ask about the bus</a>
+        </article>
+      </div>
+
+      <aside class="kids">
+        <span class="sun" aria-hidden="true">
+          <svg width="52" height="52" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.2"><circle cx="24" cy="24" r="8.5"/><path d="M24 4v5M24 39v5M4 24h5M39 24h5M9.8 9.8l3.6 3.6M34.6 34.6l3.6 3.6M38.2 9.8l-3.6 3.6M13.4 34.6l-3.6 3.6"/></svg>
+        </span>
+        <div>
+          <h3>Kids special: a mascot and a jumping castle</h3>
+          <p>Every comrade is welcome, and families too. Bring the little ones — there is room for them to be loud.</p>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="quote">
+    <div class="wrap">
+      <blockquote>&ldquo;Calling every comrade.<br><em>Come and be together again.</em>&rdquo;</blockquote>
+      <div class="rule" aria-hidden="true"></div>
+    </div>
+  </section>
+
+  <section class="section" id="gallery">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker copper">The campaign</p>
+        <h2>Made to be shared.</h2>
+        <p class="lead">Save an image, post it to your class group, send it to the comrade you have been meaning to call. Every share brings someone home.</p>
+      </div>
+
+      <div class="gallery">
+        <button class="shot" type="button"><img src="assets/gallery-01.jpg" alt="Reunion 2026 sunburst poster" loading="lazy"><span class="cap">Sunburst poster</span></button>
+        <button class="shot" type="button"><img src="assets/gallery-02.jpg" alt="Reunion 2026 classic square invitation" loading="lazy"><span class="cap">Classic invitation</span></button>
+        <button class="shot" type="button"><img src="assets/gallery-03.jpg" alt="Save the date design" loading="lazy"><span class="cap">Save the date</span></button>
+        <button class="shot" type="button"><img src="assets/gallery-04.jpg" alt="Gold frame invitation" loading="lazy"><span class="cap">Gold frame</span></button>
+        <button class="shot" type="button"><img src="assets/gallery-05.jpg" alt="Reunion poster over the Harare hills" loading="lazy"><span class="cap">The hills</span></button>
+        <button class="shot" type="button"><img src="assets/gallery-06.jpg" alt="Travel together invitation" loading="lazy"><span class="cap">Travel together</span></button>
+        <button class="shot" type="button"><img src="assets/gallery-07.jpg" alt="Kids special invitation with mascot and jumping castle" loading="lazy"><span class="cap">For the kids</span></button>
+        <button class="shot" type="button"><img src="assets/gallery-08.jpg" alt="Big date poster" loading="lazy"><span class="cap">The date</span></button>
+        <button class="shot" type="button"><img src="assets/gallery-09.jpg" alt="Venue details poster" loading="lazy"><span class="cap">The venue</span></button>
+        <button class="shot" type="button"><img src="assets/gallery-10.jpg" alt="Story invitation" loading="lazy"><span class="cap">Story invite</span></button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section kit" id="kit">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker copper">Take it with you</p>
+        <h2>Everything for the campaign.<br><em>Free to share.</em></h2>
+        <p class="lead">Posters, invitations, videos, logos, press material and forty ready-to-post captions. Download what you need, or take the whole pack and carry the invitation further.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <span class="num">01</span>
+          <p class="kit-tag">Print</p>
+          <h3>Poster &amp; invitations</h3>
+          <p>A3 poster at 300 dpi, formal invitation front and back, ticket, badge, table sign and car sticker.</p>
+          <div class="kit-links">
+            <a class="textlink" href="marketing/campaign/print/poster-a3-3508x4961.png" download>Poster</a>
+            <a class="textlink" href="marketing/campaign/print/invitation-front-1500x2100.png" download>Invitation</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="num">02</span>
+          <p class="kit-tag">Motion</p>
+          <h3>Videos for social</h3>
+          <p>Seven silent videos for Reels, Shorts and TikTok, plus a square teaser and a 16:9 loop for venue screens.</p>
+          <div class="kit-links">
+            <a class="textlink" href="marketing/campaign/video/01-reveal-9x16.mp4" download>Reveal</a>
+            <a class="textlink" href="marketing/campaign/video/05-details-9x16.mp4" download>Details</a>
+            <a class="textlink" href="marketing/campaign/video/07-loop-16x9.mp4" download>16:9 loop</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="num">03</span>
+          <p class="kit-tag">Brand</p>
+          <h3>Logos &amp; brand guide</h3>
+          <p>Horizontal and stacked lockups, transparent monograms, avatar, favicon and the six-page brand guide.</p>
+          <div class="kit-links">
+            <a class="textlink" href="marketing/campaign/brand/HZM-Reunion-2026-Brand-Guide.pdf" target="_blank" rel="noopener">Brand guide</a>
+            <a class="textlink" href="marketing/campaign/brand/logo-horizontal-gold-3000x760.png" download>Logo</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="num">04</span>
+          <p class="kit-tag">Press</p>
+          <h3>Media kit &amp; release</h3>
+          <p>The story, the day, the campaign assets and the committee contacts, ready for editors, partners and radio.</p>
+          <div class="kit-links">
+            <a class="textlink" href="marketing/campaign/mediakit/HZM-Reunion-2026-Media-Kit.pdf" target="_blank" rel="noopener">Media kit</a>
+            <a class="textlink" href="marketing/campaign/press/HZM-Reunion-2026-Press-Release.pdf" target="_blank" rel="noopener">Press release</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="num">05</span>
+          <p class="kit-tag">Content</p>
+          <h3>40-post calendar</h3>
+          <p>Five weeks of ready-to-publish posts: captions, hashtags, calls to action, alt text and posting notes.</p>
+          <div class="kit-links">
+            <a class="textlink" href="marketing/campaign/content-calendar.csv" download>Calendar CSV</a>
+            <a class="textlink" href="marketing/campaign/content-calendar.md" target="_blank" rel="noopener">Quick table</a>
+          </div>
+        </article>
+
+        <article class="card">
+          <span class="num">06</span>
+          <p class="kit-tag">Source</p>
+          <h3>The whole pack</h3>
+          <p>All 84 campaign files plus the original 21-post ad pack, published openly on GitHub for anyone to reuse.</p>
+          <div class="kit-links">
+            <a class="textlink" href="https://github.com/ekdvyb/hzm-reunion-2026" target="_blank" rel="noopener">GitHub</a>
+            <a class="textlink" href="https://github.com/ekdvyb/hzm-reunion-2026/releases/latest/download/HZM-Reunion-2026-adverts.zip">Full .zip</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="kit-download">
+        <div>
+          <strong>Download the full campaign pack</strong>
+          <span>Print, social, motion, brand and press — every format in one archive.</span>
+          <p class="meta">84 campaign files · 76 MB · free to share</p>
+        </div>
+        <a class="btn gold" href="https://github.com/ekdvyb/hzm-reunion-2026/releases/latest/download/HZM-Reunion-2026-adverts.zip">Download .zip</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section rsvp" id="rsvp">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker" style="color:var(--gold)">Save your place</p>
+        <h2>Tell us you are coming.<br><em>Bring someone with you.</em></h2>
+        <p class="lead">A call or a WhatsApp to any committee member is enough. Tell us your name, how many are coming, and whether you will travel with the group.</p>
+      </div>
+
+      <div class="contacts">
+        <div class="contact">
+          <h3>Samantha Chauya</h3>
+          <p class="role">Reunion committee</p>
+          <div class="links">
+            <a href="tel:+263779227983">Call</a>
+            <a href="https://wa.me/263779227983?text=Hello%20Samantha%2C%20I%20would%20like%20to%20RSVP%20for%20the%20HZM%20Reunion%202026." target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="contact">
+          <h3>Griffiths Mukwaira</h3>
+          <p class="role">Reunion committee</p>
+          <div class="links">
+            <a href="tel:+263776451344">Call</a>
+            <a href="https://wa.me/263776451344?text=Hello%20Griffiths%2C%20I%20would%20like%20to%20RSVP%20for%20the%20HZM%20Reunion%202026." target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+        <div class="contact">
+          <h3>Elvis Kwaramba</h3>
+          <p class="role">Reunion committee</p>
+          <div class="links">
+            <a href="tel:+263772527284">Call</a>
+            <a href="https://wa.me/263772527284?text=Hello%20Elvis%2C%20I%20would%20like%20to%20RSVP%20for%20the%20HZM%20Reunion%202026." target="_blank" rel="noopener">WhatsApp</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <a class="btn gold" href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Harare%20Zimbabwe%20Mission%20Reunion%202026&amp;dates=20261205T080000Z%2F20261205T140000Z&amp;details=Calling%20every%20comrade.%20Come%20and%20be%20together%20again.%20The%20Temple%2C%2010%3A00%20AM%2C%20then%20Kingfisher%20Park%2C%20Harare.&amp;location=The%20Temple%2C%20Harare%2C%20Zimbabwe" target="_blank" rel="noopener">Add to Google Calendar</a>
+        <a class="btn ghost" href="reunion-2026.ics" download="HZM-Reunion-2026.ics">Download .ics</a>
+        <button class="btn ghost" type="button" data-share>Share the invitation</button>
+      </div>
+      <p class="note">Admission is open to all comrades, families and friends. If you need a seat on the group travel, say so when you RSVP.</p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div>
+        <img src="assets/logo.png" alt="Harare Zimbabwe Mission Reunion 2026">
+        <p class="foot-tag" style="margin-top:1.2rem">Come and be together again.<br><span class="hash">#HZMReunion2026</span></p>
+      </div>
+      <div>
+        <p class="kicker" style="margin-bottom:1rem;color:var(--pale)">Share the invitation</p>
+        <div class="socials">
+          <a href="https://wa.me/?text=Harare%20Zimbabwe%20Mission%20Reunion%202026%20%E2%80%94%20Saturday%205%20December%2C%20The%20Temple%2C%2010%3A00%20AM.%20Come%20and%20be%20together%20again." target="_blank" rel="noopener">WhatsApp</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" rel="noopener" data-fb>Facebook</a>
+          <a href="https://twitter.com/intent/tweet?text=Harare%20Zimbabwe%20Mission%20Reunion%202026%20%E2%80%94%205%20December%20in%20Harare.%20Come%20and%20be%20together%20again." target="_blank" rel="noopener" data-x>X</a>
+          <button type="button" data-copy>Copy link</button>
+        </div>
+        <p style="margin-top:1rem;font-size:.68rem;color:rgba(247,242,228,.55)">
+          <a href="marketing/campaign/mediakit/HZM-Reunion-2026-Media-Kit.pdf" style="color:var(--pale);text-decoration:none">Media kit</a> &nbsp;·&nbsp;
+          <a href="marketing/campaign/press/HZM-Reunion-2026-Press-Release.pdf" style="color:var(--pale);text-decoration:none">Press release</a> &nbsp;·&nbsp;
+          <a href="marketing/campaign/brand/HZM-Reunion-2026-Brand-Guide.pdf" style="color:var(--pale);text-decoration:none">Brand guide</a>
+        </p>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>Harare Zimbabwe Mission &middot; Reunion 2026</span>
+      <span><a href="https://github.com/ekdvyb/hzm-reunion-2026" target="_blank" rel="noopener">GitHub</a> &middot; <a href="marketing/campaign/README-CAMPAIGN.md" target="_blank" rel="noopener">Campaign guide</a></span>
+      <span>Saturday 5 December 2026 &middot; Harare, Zimbabwe</span>
+    </div>
+  </div>
+</footer>
+
+<dialog id="lightbox" aria-label="Image viewer">
+  <button class="close" type="button">Close</button>
+  <img alt="">
+</dialog>
+
+<script>
+  // Countdown to 10:00 AM CAT on Saturday 5 December 2026
+  const target = new Date("2026-12-05T10:00:00+02:00").getTime();
+  const el = {d: document.getElementById("cd-d"), h: document.getElementById("cd-h"),
+              m: document.getElementById("cd-m"), s: document.getElementById("cd-s")};
+  const pad = n => String(n).padStart(2, "0");
+  function tick(){
+    const diff = target - Date.now();
+    if (diff <= 0){
+      el.d.textContent = "00"; el.h.textContent = "00";
+      el.m.textContent = "00"; el.s.textContent = "00";
+      document.querySelector(".count").setAttribute("aria-label", "The reunion has begun");
+      return;
+    }
+    const s = Math.floor(diff / 1000);
+    el.d.textContent = pad(Math.floor(s / 86400));
+    el.h.textContent = pad(Math.floor(s % 86400 / 3600));
+    el.m.textContent = pad(Math.floor(s % 3600 / 60));
+    el.s.textContent = pad(s % 60);
+    setTimeout(tick, 1000 - (Date.now() % 1000));
+  }
+  tick();
+
+  // Nav background
+  addEventListener("scroll", () => document.body.classList.toggle("scrolled", scrollY > 40), {passive:true});
+
+  // Share
+  const SITE = location.href.split("#")[0];
+  const SHARE_TEXT = "Harare Zimbabwe Mission Reunion 2026 — Saturday 5 December, The Temple, 10:00 AM. Come and be together again.";
+  const fb = document.querySelector("[data-fb]");
+  if (fb) fb.href = "https://www.facebook.com/sharer/sharer.php?u=" + encodeURIComponent(SITE);
+  const x = document.querySelector("[data-x]");
+  if (x) x.href = "https://twitter.com/intent/tweet?text=" + encodeURIComponent(SHARE_TEXT) + "&url=" + encodeURIComponent(SITE);
+
+  document.querySelectorAll("[data-share]").forEach(btn => {
+    btn.addEventListener("click", async () => {
+      if (navigator.share){
+        try { await navigator.share({title:"HZM Reunion 2026", text:SHARE_TEXT, url:SITE}); } catch(e){}
+      } else {
+        location.href = "https://wa.me/?text=" + encodeURIComponent(SHARE_TEXT + " " + SITE);
+      }
+    });
+  });
+
+  async function copyLink(btn){
+    try {
+      await navigator.clipboard.writeText(SITE);
+      const old = btn.textContent;
+      btn.textContent = "Link copied";
+      setTimeout(() => btn.textContent = old, 1800);
+    } catch(e){ prompt("Copy this link", SITE); }
+  }
+  document.querySelectorAll("[data-copy]").forEach(b => b.addEventListener("click", () => copyLink(b)));
+
+  // Lightbox
+  const dlg = document.getElementById("lightbox");
+  const view = dlg.querySelector("img");
+  document.querySelectorAll(".shot").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const img = btn.querySelector("img");
+      view.src = img.src; view.alt = img.alt;
+      dlg.showModal();
+    });
+  });
+  dlg.querySelector(".close").addEventListener("click", () => dlg.close());
+  dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+
+  // Respect reduced motion for the hero video
+  if (matchMedia("(prefers-reduced-motion: reduce)").matches){
+    const vid = document.querySelector(".hero video");
+    if (vid){ vid.removeAttribute("autoplay"); vid.pause(); }
+  }
+</script>
+</body>
+</html>

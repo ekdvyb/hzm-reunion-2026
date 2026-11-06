@@ -1,0 +1,33 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//HZM Reunion 2026//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+BEGIN:VEVENT
+UID:hzm-reunion-2026@harare-zimbabwe-mission
+DTSTAMP:20261105T000000Z
+DTSTART:20261205T080000Z
+DTEND:20261205T140000Z
+SUMMARY:Harare Zimbabwe Mission Reunion 2026
+LOCATION:The Temple\, Harare\, Zimbabwe / Kingfisher Park\, Harare\, Zimb
+ abwe
+DESCRIPTION:Calling every comrade. Come and be together again.\n\nSaturda
+ y 5 December 2026\nThe Temple, 10:00 AM\nThen Kingfisher Park, Harare\n\
+ nTravel together from The Temple if you are willing. Families and childr
+ en welcome: mascot and jumping castle for the kids.\n\nRSVP: Samantha 07
+ 79 227 983 | Griffiths 0776 451 344 | Elvis 0772 527 284
+CATEGORIES:Reunion,Homecoming,Harare Zimbabwe Mission
+STATUS:CONFIRMED
+TRANSP:OPAQUE
+BEGIN:VALARM
+TRIGGER:-P1D
+ACTION:DISPLAY
+DESCRIPTION:Reunion tomorrow: Harare Zimbabwe Mission 2026
+END:VALARM
+BEGIN:VALARM
+TRIGGER:-PT2H
+ACTION:DISPLAY
+DESCRIPTION:Reunion starts at 10:00 AM at The Temple
+END:VALARM
+END:VEVENT
+END:VCALENDAR
